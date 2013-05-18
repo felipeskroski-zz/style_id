@@ -1,19 +1,15 @@
 StyleId::Application.routes.draw do
   get "pages/index"
-
   get "pages/tour"
-
   get "pages/about"
-
   get "pages/pricing"
-
   get "pages/signup"
-
   get "pages/signin"
-
   get "pages/forgot_password"
-
   get "pages/salons"
+
+  match "/pages" => redirect("/")
+  root :to => 'pages#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

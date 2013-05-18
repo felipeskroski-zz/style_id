@@ -1,0 +1,52 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title= content_for?(:title) ? yield(:title) + " - DrinkBuddy" : "DrinkBuddy"
+
+    /need to set the default scale or else the view shrinks
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
+    %meta{name: "apple-mobile-web-app-capable", content: "yes"}
+    %meta{description: "Style-id description" }
+    %meta{keywords: "salon, hairstyle, app"}
+    = csrf_meta_tag
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+    = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+
+    = stylesheet_link_tag "application"
+    = yield(:head)
+
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "#"} Style ID
+          .nav-collapse.collapse
+            %ul.nav
+              %li.active
+                %a{:href => "#"} Home
+              %li
+                %a{:href => "#about"} Blog
+              %li
+                %a{:href => "#contact"} Tour 
+              %li
+                %a{:href => "#contact"} Plans & Pricing  
+            %a.btn.btn-success{:href => "#contact"} Signup    
+    = yield
+    %footer
+      .container
+        %ul.nav.nav-pills
+          %li
+            %a{:href => "#"} About us 
+          %li
+            %a{:href => "#"} Contact
+          %li
+            %a{:href => "#"} Get the app
+          %li
+            %a{:href => "#"} Terms & conditions
+  = javascript_include_tag "application"
