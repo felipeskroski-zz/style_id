@@ -3,23 +3,134 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap"
 @import "bootstrap-responsive"
+@import "compass/css3"
+
+/*Mixins*/
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal )
+  @font-face
+    font-family: $font-family
+    src: url('#{$file-path}.eot')
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype'), url('#{$file-path}.svg##{$font-family}') format('svg')
+    font-weight: $weight
+    font-style: $style
+
+/*Fonts*/
++font-face(ProximaNova, 'fonts/proximanova/proximanova-light-webfont')
++font-face(ProximaNova, 'fonts/proximanova/proximanova-semibold-webfont', bold)
++font-face(ProximaNova, 'fonts/proximanova/proximanova-lightitalic-webfont', normal, italic)
++font-face(ProximaNova, 'fonts/proximanova/proximanova-semibolditalic-webfont', bold, italic)
+
+/*Variables*/
+$gold: #B4975A
+$dark-grey: #333
+$darker-grey: #111
+
+/*Generic elements*/
+a 
+  color: $gold
+  &:hover
+    color: gold
+.btn
+  +border-radius(3px, 3px)
+  text-transform: uppercase
+  &:hover
+    +transition(none)
+    background-position: 0 0 
+  &.btn-primary
+    +background-image(linear-gradient(lighten($gold, 10%), $gold))
+    border-color: darken($gold, 10%)
+  &.btn-large
+
 
 
 /*Layout*/
 body
-  padding-top: 60px
+  background: $dark-grey
+  padding-top: 40px
+  color: white
+  font-family: 'ProximaNova', "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size: 16px
+  .navbar-inverse
+    .navbar-inner
+      background: white
+      +background-image(linear-gradient(lighten($gold, 10%), $gold))
+      border-color: $gold
+      border-bottom: none
+      +box-shadow(rgba(black, .5) 0px 1px 10px)
+      .brand
+        color: white
+  
+    .nav-collapse 
+      float: right
+      .nav
+        margin: 0
+        li
+          border-left: 1px solid rgba(white, 0.15)
+          border-right: 1px solid rgba(black, 0.15)
+          &.active
+            a
+              +background-image(linear-gradient(darken($gold, 10%), $gold))
+              background-color: darken($gold, 10%)
+              color: lighten($gold, 20%)
+          a 
+            color: white
+            text-transform: uppercase
+            padding: 14px 15px 14px
+      .call-to-action
+        border-left: 1px solid rgba(white, 0.15)
+        height: 48px
+        padding-left: 10px
+        padding-top: 0px
+        display: inline-block
+        .btn
+          font-size: 16px
+          text-transform: uppercase
+          padding: 8px 12px 6px
+  footer
+    background: $darker-grey
+    border-top: 1px solid rgba(white, .1)
+    padding: 30px 0 
+
+
+
 
 
 /*Home*/
 .jumbotron
-  margin: 80px 0
-  text-align: center
+  margin: 0px 0
+  padding: 60px 0 
+  text-align: left
+  background: transparent url(site-banner.jpg) no-repeat center top
+  min-height: 300px 
+
   h1
-    font-size: 72px
-    line-height: 1
+    font-size: 18px
+    line-height: 1.5
+    font-weight: normal
+    color: rgba(white, .7)
+    margin-bottom: 20px
+  h2
+    font-size: 38px
+    line-height: 1.1
+    font-weight: normal
   .lead 
     font-size: 24px
     line-height: 1.25
   .btn
     font-size: 21px
-    padding: 14px 24px
+    padding: 18px 28px 16px
+    margin-right: 20px
+
+.container.home 
+  padding: 40px 0
+  border-bottom: 1px solid rgba(black, .3)
+  
+.download
+  padding: 40px 0
+  border-top: 1px solid rgba(white, .2)
+  border-bottom: 1px solid rgba(black, .3)
+
+
+
+
+

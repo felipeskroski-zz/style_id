@@ -2,7 +2,7 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}/
-    %title= content_for?(:title) ? yield(:title) + " - DrinkBuddy" : "DrinkBuddy"
+    %title= content_for?(:title) ? yield(:title) + " - Style ID" : "Style ID"
 
     /need to set the default scale or else the view shrinks
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}
@@ -35,8 +35,9 @@
               %li
                 %a{:href => "#contact"} Tour 
               %li
-                %a{:href => "#contact"} Plans & Pricing  
-            %a.btn.btn-success{:href => "#contact"} Signup    
+                %a{:href => "#contact"} Plans & Pricing
+            %span.call-to-action  
+              %a.btn.btn-inverse{:href => "#contact"} Signup    
     = yield
     %footer
       .container
