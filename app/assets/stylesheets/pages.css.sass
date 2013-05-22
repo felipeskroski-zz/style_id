@@ -14,6 +14,11 @@
     font-weight: $weight
     font-style: $style
 
+@mixin hide-text
+  text-indent: 110%
+  white-space: nowrap
+  overflow: hidden
+
 /*Fonts*/
 +font-face(ProximaNova, 'fonts/proximanova/proximanova-light-webfont')
 +font-face(ProximaNova, 'fonts/proximanova/proximanova-semibold-webfont', bold)
@@ -57,8 +62,18 @@ body
       border-color: $gold
       border-bottom: none
       +box-shadow(rgba(black, .5) 0px 1px 10px)
+      .container
+        position: relative
       .brand
         color: white
+        +hide-text
+        width: 85px
+        height: 85px
+        position: absolute
+        top: 5px
+        left: 0
+        background: transparent url(logo.png) no-repeat center top
+
   
     .nav-collapse 
       float: right
@@ -76,6 +91,9 @@ body
             color: white
             text-transform: uppercase
             padding: 14px 15px 14px
+            &:hover
+              +background-image(linear-gradient(lighten($gold, 15%), $gold))
+              +single-text-shadow(0, 0, 5px, 0, white)
       .call-to-action
         border-left: 1px solid rgba(white, 0.15)
         height: 48px
@@ -90,6 +108,14 @@ body
     background: $darker-grey
     border-top: 1px solid rgba(white, .1)
     padding: 30px 0 
+    .nav 
+      li 
+        float: left
+        margin: 0 10px
+      &.social
+        li 
+          margin: 0
+
 
 
 
@@ -101,7 +127,7 @@ body
   padding: 60px 0 
   text-align: left
   background: transparent url(site-banner.jpg) no-repeat center top
-  min-height: 300px 
+  min-height: 280px 
 
   h1
     font-size: 18px
@@ -121,14 +147,59 @@ body
     padding: 18px 28px 16px
     margin-right: 20px
 
-.container.home 
-  padding: 40px 0
+.home 
+  padding: 40px 0 30px
+  border-top: 1px solid rgba(black, .3)
   border-bottom: 1px solid rgba(black, .3)
+  .row 
+    padding: 10px 0
   
 .download
   padding: 40px 0
   border-top: 1px solid rgba(white, .2)
   border-bottom: 1px solid rgba(black, .3)
+  h3 
+    font-weight: normal
+    color: rgba(white, .5)
+    font-size: 21px
+
+.home-icon
+  background: transparent url(home-icons.png) no-repeat
+  display: inline-block
+  +hide-text
+  height: 40px 
+  width: 40px
+  display: block  
+  &.spin 
+    margin: 10px 
+    float: left
+  &.scissors
+    margin: 10px
+    float: left
+    background-position: -80px 0
+  &.chain
+    margin: 10px
+    float: left
+    background-position: -40px 0
+  &.picture
+    margin: 10px 10px 10px 0
+    float: left
+    width: 50px
+    background-position: -120px 0
+  &.appstore
+    height: 60px
+    width: 177px 
+    background-position: -199px 0
+  &.facebook
+    width: 50px
+    background-position: -380px 0
+  &.pinterest
+    width: 50px
+    background-position: -430px 0
+  &.twitter
+    width: 50px
+    background-position: -480px 0
+
 
 
 

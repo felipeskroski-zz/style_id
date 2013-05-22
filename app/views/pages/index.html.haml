@@ -1,4 +1,4 @@
-.jumbotron.home
+.jumbotron
   .container
     .row
       .span5
@@ -6,21 +6,29 @@
         %h1 Introducing Style ID, the interactive hairdressing experience that builds rapport and wows clients.
         %a.btn.btn-large.btn-inverse{:href => "#"} Signup
         %a.btn.btn-large.btn-primary{:href => "#"} Take a tour
-.container.home 
-  .row
-    .span6
-      %p.lead Change the way you and your client make hair and fashion choices.
+.home 
+  .container
+    .row
+      .span6
+        .home-icon.spin
+        %p.lead Change the way you and your client make hair and fashion choices.
 
-    .span6
-      %p.lead Enjoy shapes and styles that are personalized to your clients styling needs.
-  .row
-    .span6
-      %p.lead Build loyalty and rapport using our simple and fun consultation tool.
-    .span6
-      %p.lead Our extensive image library offers inspiration and the latest trends and styles.
+      .span6
+        .home-icon.scissors
+        %p.lead Enjoy shapes and styles that are personalized to your clients styling needs.
+    .row
+        
+      .span6
+        .home-icon.chain
+        %p.lead Build loyalty and rapport using our simple and fun consultation tool.
+      
+      .span6
+        .home-icon.picture
+        %p.lead Our extensive image library offers inspiration and the latest trends and styles.
 .download
   .container
     .row
-      .span12
-        %a.btn.btn-success{:href => "#"} Available at the App Store
+      .span2
+        %a.home-icon.appstore{:href => "#"} Available at the App Store
+      .span10
         %h3 Be part of styleid and enjoy the future of hairstyling. Get the free app

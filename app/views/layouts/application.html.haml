@@ -41,13 +41,24 @@
     = yield
     %footer
       .container
-        %ul.nav.nav-pills
-          %li
-            %a{:href => "#"} About us 
-          %li
-            %a{:href => "#"} Contact
-          %li
-            %a{:href => "#"} Get the app
-          %li
-            %a{:href => "#"} Terms & conditions
+        .row
+          .span6
+            %ul.nav
+              %li
+                %a{:href => "#"} About us 
+              %li
+                %a{:href => "#"} Contact
+              %li
+                %a{:href => "#"} Get the app
+              %li
+                %a{:href => "#"} Terms & conditions
+          .span6
+            %ul.nav.social.pull-right
+              %li
+                %a.home-icon.facebook{:href => "#"} facebook
+              %li
+                %a.home-icon.pinterest{:href => "#"} pinterest
+              %li
+                %a.home-icon.twitter{:href => "#"} twitter
+
   = javascript_include_tag "application"
