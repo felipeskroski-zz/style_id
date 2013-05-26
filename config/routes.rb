@@ -1,6 +1,5 @@
 StyleId::Application.routes.draw do
   root :to => 'pages#index'
-  match "pages/" => redirect("/")
   get "pages/index"
   get "pages/tour"
   get "pages/about"

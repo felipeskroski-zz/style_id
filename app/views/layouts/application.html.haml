@@ -25,7 +25,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"} Style ID
+          %a.brand{:href => "/"} Style ID
           .nav-collapse.collapse
             %ul.nav
               %li.active
@@ -38,7 +38,8 @@
                 %a{:href => "#contact"} Plans & Pricing
             %span.call-to-action  
               %a.btn.btn-inverse{:href => "#contact"} Signup    
-    = yield
+    .wrap
+      = yield
     %footer
       .container
         .row

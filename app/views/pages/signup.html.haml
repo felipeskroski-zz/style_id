@@ -1,2 +1,8 @@
-%h1 Pages#signup
-%p Find me in app/views/pages/signup.html.haml
+.container
+  %form.form-signup
+    %h2.form-signup-heading Please sign in
+    %input.input-block-level{:placeholder => "Email address", :type => "text"}
+    %input.input-block-level{:placeholder => "Password", :type => "password"}
+    %input.input-block-level{:placeholder => "Confirm password", :type => "password"}
+        
+    %button.btn.btn-large.btn-primary.btn-block{:type => "submit"} Sign up

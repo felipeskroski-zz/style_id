@@ -5,7 +5,10 @@
 @import "bootstrap-responsive"
 @import "compass/css3"
 
+
+/*-------------------------------------------------------------------------*/
 /*Mixins*/
+/*-------------------------------------------------------------------------*/
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal )
   @font-face
     font-family: $font-family
@@ -19,18 +22,27 @@
   white-space: nowrap
   overflow: hidden
 
+
+/*-------------------------------------------------------------------------*/
 /*Fonts*/
+/*-------------------------------------------------------------------------*/
 +font-face(ProximaNova, 'fonts/proximanova/proximanova-light-webfont')
 +font-face(ProximaNova, 'fonts/proximanova/proximanova-semibold-webfont', bold)
 +font-face(ProximaNova, 'fonts/proximanova/proximanova-lightitalic-webfont', normal, italic)
 +font-face(ProximaNova, 'fonts/proximanova/proximanova-semibolditalic-webfont', bold, italic)
 
+
+/*-------------------------------------------------------------------------*/
 /*Variables*/
+/*-------------------------------------------------------------------------*/
 $gold: #B4975A
 $dark-grey: #333
 $darker-grey: #111
 
+
+/*-------------------------------------------------------------------------*/
 /*Generic elements*/
+/*-------------------------------------------------------------------------*/
 a 
   color: $gold
   &:hover
@@ -47,14 +59,65 @@ a
   &.btn-large
 
 
+/*-------------------------------------------------------------------------*/
+/*Forms*/
+/*-------------------------------------------------------------------------*/
 
+.form-signup
+  margin: 40px auto
+  max-width: 320px
+  border: 2px solid black
+  padding: 20px 
+  background: #222
+  h2
+    margin-top: 0px
+  label 
+    color: #999
+    margin-bottom: 20px
+  input[type="text"], input[type="password"]
+    font-size: 20px
+    padding: 24px 10px
+    margin-bottom: 20px
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], 
+input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], 
+input[type="week"], input[type="number"], input[type="email"], input[type="url"], 
+input[type="search"], input[type="tel"], input[type="color"], .uneditable-input 
+  background: #333
+  font-family: 'ProximaNova', "Helvetica Neue", Helvetica, Arial, sans-serif
+  border-color: black black #383838 #383838
+  font-size: 16px
+  padding: 20px 10px
+  +border-radius(0,0)
+  +box-shadow(rgba(black, .2) 0 0 5px 1px inset)
+input[type="checkbox"]
+  width: 14px
+  height: 14px
+button
+  font-family: 'ProximaNova', "Helvetica Neue", Helvetica, Arial, sans-serif
+
+
+
+
+/*-------------------------------------------------------------------------*/
 /*Layout*/
+/*-------------------------------------------------------------------------*/
+html, body
+  height: 100%
 body
   background: $dark-grey
-  padding-top: 40px
   color: white
   font-family: 'ProximaNova', "Helvetica Neue", Helvetica, Arial, sans-serif
   font-size: 16px
+  .wrap 
+    height: 100%
+    width: 100%
+    display: table
+    padding-top: 40px
+    padding-bottom: 120px
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
   .navbar-inverse
     .navbar-inner
       background: white
@@ -107,7 +170,9 @@ body
   footer
     background: $darker-grey
     border-top: 1px solid rgba(white, .1)
-    padding: 30px 0 
+    padding: 40px 0
+    margin: -120px auto 0
+    height: 100px
     .nav 
       li 
         float: left
@@ -118,10 +183,16 @@ body
 
 
 
+/*-------------------------------------------------------------------------*/
+
+/* PAGE SPECIFIC
+
+/*-------------------------------------------------------------------------*/
 
 
-
+/*-------------------------------------------------------------------------*/
 /*Home*/
+/*-------------------------------------------------------------------------*/
 .jumbotron
   margin: 0px 0
   padding: 60px 0 

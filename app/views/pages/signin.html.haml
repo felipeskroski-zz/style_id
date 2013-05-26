@@ -1,2 +1,9 @@
-%h1 Pages#signin
-%p Find me in app/views/pages/signin.html.haml
+.container
+  %form.form-signup
+    %h2.form-signup-heading Please sign in
+    %input.input-block-level{:placeholder => "Email address", :type => "text"}
+    %input.input-block-level{:placeholder => "Password", :type => "password"}
+    %label.checkbox
+      %input{:type => "checkbox", :value => "remember-me"}
+        Remember me
+    %button.btn.btn-large.btn-primary.btn-block{:type => "submit"} Sign in
