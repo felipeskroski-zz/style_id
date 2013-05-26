@@ -90,6 +90,9 @@ input[type="search"], input[type="tel"], input[type="color"], .uneditable-input
   padding: 20px 10px
   +border-radius(0,0)
   +box-shadow(rgba(black, .2) 0 0 5px 1px inset)
+  &:focus
+    +box-shadow(rgba(0, 0, 0, 0.075) 0 1px 1px inset, rgba(lighten($gold, 20%), 0.6) 0 0 8px)
+    border-color: $gold
 input[type="checkbox"]
   width: 14px
   height: 14px
