@@ -38,18 +38,21 @@
 $gold: #B4975A
 $dark-grey: #333
 $darker-grey: #111
+$yellow: #FCD55B
 
 
 /*-------------------------------------------------------------------------*/
 /*Generic elements*/
 /*-------------------------------------------------------------------------*/
 a 
-  color: $gold
+  color: $yellow
   &:hover
-    color: gold
+    color: lighten($yellow, 10%)
 .btn
   +border-radius(3px, 3px)
   text-transform: uppercase
+  +text-shadow(rgba(black, 0.2) 0px -1px 1px)
+  padding-top: .5em
   &:hover
     +transition(none)
     background-position: 0 0 
@@ -57,6 +60,9 @@ a
     +background-image(linear-gradient(lighten($gold, 10%), $gold))
     border-color: darken($gold, 10%)
   &.btn-large
+    padding-top: .7em
+.center
+  text-align: center
 
 
 /*-------------------------------------------------------------------------*/
@@ -133,12 +139,13 @@ body
       .brand
         color: white
         +hide-text
-        width: 85px
-        height: 85px
+        width: 65px
+        height: 65px
         position: absolute
         top: 5px
         left: 0
         background: transparent url(logo.png) no-repeat center top
+        background-size: 65px auto
 
   
     .nav-collapse 
@@ -170,6 +177,16 @@ body
           font-size: 16px
           text-transform: uppercase
           padding: 8px 12px 6px
+  .title-bar
+    background: transparent url(top-bg.jpg) repeat-x center top
+    padding: 50px 0 30px
+    border-bottom: 1px solid black
+    h1
+      font-size: 36px
+      text-transform: uppercase
+      +text-shadow(rgba(black, .5) 0px 2px 10px)
+
+
   footer
     background: $darker-grey
     border-top: 1px solid rgba(white, .1)
@@ -273,6 +290,40 @@ body
   &.twitter
     width: 50px
     background-position: -480px 0
+
+
+/*-------------------------------------------------------------------------*/
+/*Pricing*/
+/*-------------------------------------------------------------------------*/
+.pricing
+  padding: 40px 0
+  .plan
+    background: #222
+    border: 2px solid black
+    padding: 20px
+    h2 
+      margin-top: 0
+      text-transform: uppercase
+      font-size: 24px
+      font-weight: normal
+    .price 
+      color: $gold
+      font-size: 48px
+      padding: 20px 0 10px
+      border-top: 1px solid darken($gold, 30%)
+      border-bottom: 1px solid darken($gold, 30%)
+      .small 
+        font-size: .5em
+        font-weight: normal
+    p 
+      font-size: 18px
+      color: #ccc
+      margin: 20px 0 20px
+.container.center
+  padding-bottom: 50px
+
+
+  
 
 
 
