@@ -1,8 +1,39 @@
+
 .container
-  %form.form-signup
-    %h2.form-signup-heading Sign up
-    %input.input-block-level{:placeholder => "Email address", :type => "text"}
-    %input.input-block-level{:placeholder => "Password", :type => "password"}
-    %input.input-block-level{:placeholder => "Confirm password", :type => "password"}
+  %form.form-center.signup
+    %h2 Sign up for
+    .plan
+      %h2 Single plan
+      %h3.price 
+        $11
+        %span.small per month
+      %p 1 Haidresser
+    %hr
+    %label{:for => 'name'}
+      Name 
+    %input.input-block-level#name{:type => "text"}
+    %label{:for => 'email'}
+      Email address
+    %input.input-block-level#email{:type => "email"}
+    %label
+      Salon name
+    %input.input-block-level{:type => "text"}  
+    %label{:for => 'salon-name'}
+      Salon name
+      %input.input-block-level#salon-name{:type => "tel"}
+    %h3
+      About you
+    %label.checkbox
+      %input{:type => "checkbox", :value => "salon-owner"}
+        Salon owner
+    %label.checkbox
+      %input{:type => "checkbox", :value => "hairdresser"}
+        Hairdresser
+    %label{:for => 'password'}
+      Password
+      %input.input-block-level#password{:type => "password"}
+    %label{:for => 'confirm-pass'}
+      Confirm password  
+      %input.input-block-level#confirm-pass{:type => "password"}
         
     %button.btn.btn-large.btn-primary.btn-block{:type => "submit"} Sign up
