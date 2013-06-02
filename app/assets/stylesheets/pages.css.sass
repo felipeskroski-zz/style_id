@@ -39,7 +39,7 @@ $gold: #B4975A
 $dark-grey: #333
 $darker-grey: #111
 $yellow: #FCD55B
-$light-grey: #ccc
+$light-grey: #ddd
 
 
 /*-------------------------------------------------------------------------*/
@@ -70,6 +70,16 @@ hr
   height: 0
 p 
   line-height: 1.5em
+  color: $light-grey
+  &.small 
+    color: #666
+    display: block
+    font-size: 14px
+    margin-top: 10px 
+    text-align: center
+    a 
+      color: $gold 
+li 
   color: $light-grey
 .side-title 
   margin-top: 0
@@ -107,6 +117,8 @@ p
   border: 2px solid black
   padding: 20px 
   background: #222
+  &.top
+    margin-top: 0
 
   h2
     margin-top: 0px
@@ -128,6 +140,15 @@ p
     font-size: 18px
     padding: 20px 10px
     margin-bottom: 15px
+
+  input[type="file"]
+    font-size: 18px
+    padding: 0px
+    margin-bottom: 15px
+    font-family: 'ProximaNova', "Helvetica Neue", Helvetica, Arial, sans-serif
+    line-height: 20px
+
+
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], 
 input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], 
@@ -238,8 +259,17 @@ body
       padding: 20px 0
     p 
       font-size: 18px
+      &.small 
+        color: #666
+        display: block
+        font-size: 14px
+        margin-top: 10px 
+        text-align: center
+        a 
+          color: $gold 
     img 
       margin-bottom: 20px
+
 
 
 
@@ -357,14 +387,6 @@ body
   .plan 
     border: none 
     padding: 0
-  .small 
-    color: #666
-    display: block
-    font-size: 14px
-    margin-top: 10px 
-    text-align: center
-    a 
-      color: $gold 
 
 /*-------------------------------------------------------------------------*/
 /*Signin*/
@@ -408,6 +430,20 @@ body
     margin: 20px 0 20px
 .container.center
   padding-bottom: 50px
+
+
+/*-------------------------------------------------------------------------*/
+/*Terms*/
+/*-------------------------------------------------------------------------*/
+ol.terms > li 
+  line-height: 1.5em
+  font-size: 24px
+  ol li 
+    font-weight: normal
+    font-size: 16px
+    margin: 10px 0
+
+
 
 
   

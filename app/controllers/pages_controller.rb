@@ -22,4 +22,10 @@ class PagesController < ApplicationController
 
   def salons
   end
+
+  def competition
+  end
+
+  def terms
+  end
 end
