@@ -8,6 +8,7 @@ StyleId::Application.routes.draw do
   get "pages/signin"
   get "pages/forgot_password"
   get "pages/salons"
+  get "pages/salon_detail"
   get "pages/competition"
   get "pages/terms"
   get "pages/forgot_password"

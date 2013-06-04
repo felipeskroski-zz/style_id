@@ -23,6 +23,9 @@ class PagesController < ApplicationController
   def salons
   end
 
+  def salon_detail
+  end
+
   def competition
   end
 
