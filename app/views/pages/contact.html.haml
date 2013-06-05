@@ -1,0 +1,23 @@
+.title-bar
+  .container
+    %h1 Contact us
+.container.content
+  .row
+    .span6
+      %h2.side-title We'd love to hear from you :)
+      %p 
+        Complete the form and we'll endeavour to get back in touch with you as soon as we can.
+    .span6
+      %form.form-center.wide.top{:action => "#", :enctype => "multipart/form-data", :method => "post"}
+        %input.honeyPot{:style => "display: none;", :type => "text"}/
+        .control-group
+          .controls
+            %input.input-block-level{:name => "email", :placeholder => "Email address", :type => "text", :value => ""}/
+        .control-group
+          .controls
+            %textarea.input-block-level{:cols => "40", :name => "message", :placeholder => "Message", :rows => "5"}
+        %br/
+        %button.btn.btn-large.btn-primary.btn-block{:type => "submit"} Submit
+        %div{:style => "display:none;"}
+          %input{:name => "_formkey", :type => "hidden", :value => "d23cf1c0-fcaa-4885-9284-e4acc7040aa3"}/
+          %input{:name => "_formname", :type => "hidden", :value => "no_table/create"}/
