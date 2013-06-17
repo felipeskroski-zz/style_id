@@ -38,6 +38,7 @@ $dark-grey: #333
 $darker-grey: #111
 $yellow: #FCD55B
 $light-grey: #ddd
+$med-grey: #777
 
 
 /*-------------------------------------------------------------------------*/
@@ -149,8 +150,9 @@ li
 
   input[type="text"], input[type="password"], input[type="email"], input[type="tel"]
     font-size: 18px
-    padding: 20px 10px
+    padding: 5px 10px
     margin-bottom: 15px
+    min-height: 40px
 
   input[type="file"]
     font-size: 18px
@@ -191,6 +193,14 @@ button
 textarea 
   padding-top: 10px
 
+input::-webkit-input-placeholder
+  color: $med-grey
+input::-moz-placeholder
+  color: $med-grey
+input:-moz-placeholder 
+  color: $med-grey
+
+
 
 
 
@@ -225,6 +235,7 @@ body
       .brand
         color: white
         +hide-text
+        text-indent: 100px
         width: 65px
         height: 65px
         position: absolute
@@ -289,9 +300,6 @@ body
           color: $gold 
     img 
       margin-bottom: 20px
-
-
-
 
   footer
     background: $darker-grey
